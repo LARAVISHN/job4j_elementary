@@ -14,17 +14,13 @@ public class ChessBoardTest {
 
     @Test
     public void wayIs7() {
-        int way = ChessBoard.way(6, 0, 4, 2);
-        assertThat(way, is(2));
+        int way = ChessBoard.way(7, 0, 0, 7);
+        assertThat(way, is(7));
     }
 
     @Test
     public void wayIs0() {
         int way = ChessBoard.way(2, 6, 4, 1);
         assertThat(way, is(0));
-    }
-
-    @Test
-    public void way() {
     }
 }
