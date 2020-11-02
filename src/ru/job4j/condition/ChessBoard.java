@@ -5,13 +5,12 @@ public class ChessBoard {
         int res = 0;
         if (Math.abs(x1 - y1) == Math.abs(x2 - y2)) {
             res = Math.abs(x2 - x1);
-
         }
         return res;
     }
 
     public static void main(String[] args) {
-        System.out.println(way(2, 0, 5, 3));
-    }
+        System.out.println(way(2, 6, 4, 1));
 
+    }
 }
