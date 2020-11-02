@@ -7,10 +7,6 @@ import static org.hamcrest.Matchers.is;
 
 public class ThreeMaxTest {
 
-
-    /**
-     * @noinspection checkstyle:EmptyLineSeparator
-     */
     @Test
     public void firstMax() {
         int rsl = ThreeMax.max(10, 5, 1);
@@ -49,7 +45,7 @@ public class ThreeMaxTest {
 
     @Test
     public void secondEqThird() {
-        int rsl = ThreeMax.max(100, 100, 100);
+        int rsl = ThreeMax.max(1, 100, 100);
         assertThat(rsl, is(100));
     }
 }
