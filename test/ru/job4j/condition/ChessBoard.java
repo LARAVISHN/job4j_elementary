@@ -6,8 +6,6 @@ public class ChessBoard {
         if (Math.abs(x1 - y1) == Math.abs(x2 - y2) || (x1 + y1) == (x2 + y2)) {
             res = Math.abs(x2 - x1);
 
-        } else {
-            return 0;
         }
         return res;
     }
