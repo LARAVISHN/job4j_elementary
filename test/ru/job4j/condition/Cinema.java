@@ -8,7 +8,7 @@ public class Cinema {
             System.out.println("I can't.");
         }
     }
-    /** @noinspection CheckStyle*/
+
     public static void main(String[] args) {
         permission(true, true);
         permission(true, false);

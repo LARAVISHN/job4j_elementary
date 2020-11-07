@@ -5,10 +5,6 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-
-
-
-/** @noinspection checkstyle:EmptyLineSeparator*/
 public class MaxTest {
 
     @Test
