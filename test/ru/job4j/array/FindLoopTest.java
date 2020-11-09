@@ -9,16 +9,22 @@ import static org.junit.Assert.assertThat;
 public class FindLoopTest {
 
     @Test
-    public void whenEl1() {
-
-        int result = FindLoop.indexOf(new int[]{9, 80, 6, 5, 3}, 80);
-        assertThat(result, is(1));
+    public void whenArrayHasLength10Then0() {
+        int[] input = new int[]{5, 10, 3};
+        int value = 10;
+        int result = FindLoop.indexOf(input, value);
+        int expect = 1;
+        assertThat(result, is(expect));
     }
 
     @Test
-    public void whenEl3() {
-        int[] input = {2, 98, 78, 56};
-        int result = FindLoop.indexOf(input, 56);
-        assertThat(result, is(3));
+    public void whenFind2() {
+        int[] input = new int[]{5, 2, 10, 2, 4, 2};
+        int value = 2;
+        int start = 3;
+        int finish = 5;
+        int result = FindLoop.indexOf(input, value, start, finish);
+        int expect = 3;
+        assertThat(result, is(expect));
     }
 }
