@@ -13,4 +13,15 @@ public class MatrixCheckTest {
         boolean res = MatrixCheck.monoHorisontal(input, 1);
         assertThat(res, is(true));
     }
+
+    @Test
+    public void monoVertical() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+        };
+        boolean result = MatrixCheck.monoVertical(input, 2);
+        assertThat(result, is(true));
+    }
 }
