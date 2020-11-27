@@ -2,31 +2,32 @@ package ru.job4j.array;
 
 public class Merge {
     public static int[] merge(int[] left, int[] right) {
-        int[] res = new int[left.length + right.length];
-        int i = 0;
-        int j = 0;
-        int k = 0;
 
-        while (i < left.length && j < right.length) {
-            if (left[i] < right[j]) {
-                res[k] = left[i];
+        int[] res = new int[left.length + right.length];
+
+        int i = 0, j = 0;
+        for (int k = 0; k < res.length; k++) {
+
+            if (i > left.length - 1) {
+                int a = right[j];
+                res[k] = a;
+                j++;
+            } else if (j > right.length - 1) {
+                int a = left[i];
+                res[k] = a;
+                i++;
+            } else if (left[i] < right[j]) {
+                int a = left[i];
+                res[k] = a;
                 i++;
             } else {
-                res[k] = right[j];
+                int b = right[j];
+                res[k] = b;
                 j++;
             }
-            k++;
         }
-        while (i < left.length) {
-            res[k] = left[i];
-            i++;
-            k++;
-        }
-        while (j < right.length) {
-            res[k] = right[j];
-            j++;
-            k++;
-        }
+
+
         return res;
     }
 }
